@@ -440,5 +440,6 @@ th, td {
     .footer-content {
       flex-direction: column;
       text-align: center;
+      animation: alternate;
     }
  }
