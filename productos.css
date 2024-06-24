@@ -17,9 +17,7 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
-img {
-  max-width: 100%;
-}
+
 
 .container {
   max-width: 1200px;
@@ -78,17 +76,6 @@ img {
 
 .submenu {
   position: relative;
-}
-
-.carrito-icon {
-  width: 30px; 
-  margin-left: 10px; 
-  margin-top: px; 
-}
-
-.submenu img {
-  width: 30px;
-  margin-left: 30px;
 }
 
 .submenu #carrito {
