@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,400;0,800;0,900&display=swap');
+
+/*
+font-family: "Poppins", sans-serif;
+font-family: "Oswald", sans-serif;
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #ff0000;
+  padding: 27px 0;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 25px;
+  color: #111;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.menu .navbar ul {
+  display: flex;
+}
+
+.menu .navbar ul li {
+  position: relative;
+  float: left;
+}
+
+.menu .navbar ul li a {
+  font-size: 18px;
+  padding: 20px;
+  color: #111;
+  display: block;
+}
+
+#menu {
+  display: none;
+}
+
+.menu-icono {
+  width: 25px;
+}
+
+.menu label {
+  cursor: pointer;
+  display: none;
+}
+
+.submenu {
+  position: relative;
+}
+
+.carrito-icon {
+  width: 30px; 
+  margin-left: 10px; 
+}
+
+.submenu img {
+  width: 30px;
+  margin-left: 30px;
+}
+
+.submenu #carrito {
+  display: none;
+}
+
+.submenu:hover #carrito {
+  display: block;
+  position: absolute;
+  right: 0;
+  backdrop-filter: blur(10px);
+  top: 100%;
+  z-index: 1;
+  background-color: #4E4B5076;
+  padding: 20px;
+  min-width: 400px;
+}
+
+.products {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.products h2 {
+  color: #111111;
+  font-family:'Oswald', sans-serif;
+  font-size: 50px;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+.product-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) ;
+  gap: 50px;
+}
+
+.product {
+  text-align: center;
+  padding: 30px;
+  box-shadow: 0 0 20px rgba(0, 0 , 0, 0.1);
+}
+
+.product img {
+  width: 250px;
+  height: 250px;
+  margin-bottom: 20px;
+}
+
+.product h1 {
+  font-size: 20px;
+  color: #111111;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.product p, .precio {
+  font-size: 16px;
+  color: #111111;
+  margin-bottom: 15px;
+}
+
+.precio {
+  font-weight: 800;
+}
+
+.btn-2 {
+  display: inline-block;
+  padding: 7px 10px;
+  background-color: #111111;
+  color: #FFFF;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+footer {
+  padding: 50px 0;
+  background-color: #111111;
+  color: #fff;
+  text-align: center;
+}
+
+/* Dropdown Menu Styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px rgb(255, 255, 255);
+  z-index: 1;
+}
+
+.dropdown-content li a {
+  color: #000000;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  white-space: nowrap;
+}
+
+.dropdown-content li a:hover {
+  background-color: #000000;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown {
+position: relative;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #ffffff;
+color: #ff0000;
+box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+z-index: 1;
+padding: 10px;
+}
+
+.dropdown-content li {
+display: block;
+}
+
+.dropdown-content li a {
+color: #000000;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+white-space: nowrap;
+}
+
+.dropdown-content li a:hover {
+background-color: #ff0000;
+color: #000;
+}
+
+@media (max-width:991px) {
+    .menu {
+      padding: 20px;
+    }
+
+    .menu label {
+      display: initial;
+    }
+
+    .menu .navbar {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: #111111;
+      display: none;
+    } 
+
+    .menu .navbar ul li {
+      width: 100%;
+    }
+
+    .menu ul a {
+      color: #FFFF;
+    }
+
+    #menu:checked ~ .navbar {
+      display: initial;
+    }
+
+    .logo {
+      display: none;
+    }
+
+    .submenu:hover #carrito {
+      min-width: 100%;
+    }
+
+    .header {
+      min-height: 0vh;
+    }
+    
+    .products {
+      padding: 30px 30px 30px;
+    }
+
+    .products h2 {
+      margin-bottom: 30px;
+    }
+
+    .product-content {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 30px;
+    }
+
+    .product img {
+      width: 200px;
+      height: 200px;
+    }
+}
