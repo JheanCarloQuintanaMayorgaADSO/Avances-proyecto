@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,400;0,800;0,900;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,400;0,800;0,900&display=swap');
 
 /*
 font-family: "Poppins", sans-serif;
@@ -19,6 +19,8 @@ body {
 
 img {
   max-width: 100%;
+  height: auto; /* Ensure images maintain aspect ratio */
+  object-fit: contain; /* Ensures images fit within their containers without being distorted */
 }
 
 .container {
@@ -247,6 +249,7 @@ th, td {
 
 .ofert-img img {
   width: 250px;
+  object-fit: contain; /* Ensures images fit within their containers without being distorted */
 }
 
 .ofert-text {
@@ -297,9 +300,10 @@ th, td {
 }
 
 .product img {
-  width: 250px;
-  height: 370px;
-  margin-bottom: 250px;
+  width: 100%; /* Ensure images fit within their containers */
+  max-width: 250px;
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 15px;
 }
 
 .product h3 {
@@ -413,104 +417,74 @@ th, td {
       top: 100%;
       left: 0;
       right: 0;
-      background-color: #111111;
-      display: none;
-    } 
+      background-color: #f5f5f5; /* Ensure the dropdown is visible */
+      flex-direction: column;
+    }
+
+    .menu .navbar ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
 
     .menu .navbar ul li {
       width: 100%;
     }
 
-    .menu ul a {
-      color: #FFFF;
-    }
-
-    #menu:checked ~ .navbar {
-      display: initial;
-    }
-
-    .logo {
-      display: none;
-    }
-
-    .submenu:hover #carrito {
-      min-width: 100%;
-    }
-
-    .header {
-      min-height: 0vh;
-    }
-
-    .header-content {
-      padding: 50px 0;
-      flex-direction: column;
-    }
-
-    .header-img {
-      display: none;
-    }
-
-    .header-txt {
-      flex-basis: 100%;
+    .menu .navbar ul li a {
+      padding: 20px 0;
+      width: 100%;
       text-align: center;
     }
 
+    .header-content {
+      flex-direction: column;
+      padding: 0 50px;
+    }
+
     .header-txt h1 {
-      font-size: 70px;
+      font-size: 50px;
+    }
+
+    .header-img img {
+      width: 100%;
+      max-width: 500px;
     }
 
     .ofert {
-      padding: 30px 30px 0 30px;
       flex-direction: column;
     }
 
     .ofert-1 {
-      margin-bottom: 30px;
-    }
-
-    .products {
-      padding: 30px 30px 30px;
-    }
-
-    .products h2 {
-      margin-bottom: 30px;
+      flex-basis: 100%;
+      margin-bottom: 20px;
     }
 
     .product-content {
-      grid-template-columns: repeat(1, 1fr);
-      gap: 30px;
-    }
-
-    .product img {
-      width: 200px;
-      height: 280px;
+      grid-template-columns: 1fr;
+      gap: 20px;
     }
 
     .icons {
-      padding: 30px;
       flex-direction: column;
     }
 
     .icon-1 {
-      margin-bottom: 30px;
+      flex-basis: 100%;
+      margin-bottom: 20px;
     }
 
     .blog {
-      padding: 0 30px 30px 30px;
       flex-direction: column;
     }
 
     .blog-1 {
-      margin-bottom: 30px;
-    }
-
-    .footer {
-      padding: 30px;
+      flex-basis: 100%;
+      margin-bottom: 20px;
     }
 
     .footer-content {
       flex-direction: column;
-      text-align: center;
-      animation: alternate;
     }
- }
+  }
